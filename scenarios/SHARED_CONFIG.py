@@ -19,7 +19,7 @@ AUTHOR = "Team"
 
 # 결과 출력 시 소수점 자리수
 # ⚠️ 충돌 발생 예정: 모든 팀원이 이 값을 수정합니다!
-DECIMAL_PLACES = 2
+DECIMAL_PLACES = 8
 
 # =============================================================================
 # 지원 연산 목록
@@ -29,6 +29,8 @@ DECIMAL_PLACES = 2
 SUPPORTED_OPERATIONS = [
     # 기본 연산
     "add",
+
+    "round_result",
     "subtract",
     "median"
 
@@ -42,5 +44,6 @@ SUPPORTED_OPERATIONS = [
 ERROR_MESSAGES = {
     "empty_list": "리스트가 비어있습니다.",
     "division_by_zero": "0으로 나눌 수 없습니다.",
+    "zero":"0",
     "invalid_type": "잘못된 타입입니다.",
 }
