@@ -27,7 +27,14 @@ def validate_numbers(data: List[Any]) -> bool:
     """
     # TODO: 구현하세요
     # 힌트: isinstance(x, (int, float)) 사용
-    pass
+    # all() 안에 들어오는 모든 값 검사 -> 
+    if data is None or not isinstance(data, list):
+        return False
+
+    if all(isinstance(x, (int, float)) for x in data):
+        return True
+    else:
+        return False
 
 
 def round_result(value: float, decimals: int = 2) -> float:
@@ -48,7 +55,9 @@ def round_result(value: float, decimals: int = 2) -> float:
     """
     # TODO: 구현하세요
     # 힌트: round() 내장 함수 사용
-    pass
+    if type(value) is not float:
+        return "소수가 아닙니다"
+    return round(value, decimals)
 
 
 def format_output(name: str, value: float, decimals: int = 2) -> str:
@@ -70,4 +79,14 @@ def format_output(name: str, value: float, decimals: int = 2) -> str:
     """
     # TODO: 구현하세요
     # 힌트: f-string 또는 format() 사용
-    pass
+    if name is None:
+        return "결과 이름이 없습니다"
+
+    if value is None:
+        return "결과 값이 없습니다"
+
+    if decimals == 0:
+        return f"{name}: {round(value)}"        
+    return f"{name}: {round(value, decimals)}"
+
+    
