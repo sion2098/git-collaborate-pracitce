@@ -29,10 +29,11 @@ DECIMAL_PLACES = 8
 SUPPORTED_OPERATIONS = [
     # 기본 연산
     "add",
-    "subtract",
-    "validate_numbers",
+
     "round_result",
+    "subtract",
     "format_output"
+    "validate_numbers",
     # 팀원들이 각자 추가할 예정
 ]
 
