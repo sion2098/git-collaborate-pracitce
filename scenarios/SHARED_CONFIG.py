@@ -32,8 +32,8 @@ SUPPORTED_OPERATIONS = [
 
     "round_result",
     "subtract",
-    "format_output"
-    "validate_numbers",
+    "median"
+
     # 팀원들이 각자 추가할 예정
 ]
 
