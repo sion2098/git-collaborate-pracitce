@@ -87,4 +87,4 @@ def divide(a: float, b: float) -> float:
     """
     # TODO: 구현하세요
     # 힌트: b가 0이면 ZeroDivisionError를 발생시켜야 합니다
-    return a / b
+    # return a / b
