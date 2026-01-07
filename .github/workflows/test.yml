@@ -1,0 +1,27 @@
+# .github/workflows/test.yml
+
+name: Run Tests              # 워크플로우 이름
+
+on:                          # 트리거 조건
+  push:                      # push 할 때 실행
+    branches: [ main ]
+  # pull_request:              # PR 생성 시 실행
+  #   branches: [ main ]
+
+jobs:                        # 작업 정의
+  test:                      # 작업 이름
+    runs-on: ubuntu-latest   # 실행 환경
+
+    steps:                   # 단계별 실행
+    - uses: actions/checkout@v4      # 코드 체크아웃
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.9'
+
+    - name: Install dependencies
+      run: pip install -r requirements.txt
+
+    - name: Run tests
+      run: pytest tests/
