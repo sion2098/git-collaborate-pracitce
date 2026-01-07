@@ -30,6 +30,8 @@ SUPPORTED_OPERATIONS = [
     # 기본 연산
     "add",
     "subtract",
+    "median"
+
     # 팀원들이 각자 추가할 예정
 ]
 
